@@ -21,9 +21,7 @@ ul {
 }
 
 p {
-  color: #777;
   @include trailer(1);
-
 }
 
 a {
