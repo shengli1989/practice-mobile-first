@@ -1,0 +1,38 @@
+body {
+  color: #555;
+  font-family: "Baskerville",
+             "Georgia",
+             "Times New Roman",
+             serif;
+}
+
+
+#{headings(all)} {
+  @include reset-box-model;
+  //font-weight: normal;
+}
+
+ul, p {
+  @include reset-box-model;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  color: #777;
+  @include trailer(1);
+
+}
+
+a {
+  color: #369;
+  text-decoration: none;
+  //@include hover-link;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
