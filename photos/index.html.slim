@@ -1,0 +1,10 @@
+.content
+  h2.page-title PHOTOS
+  .photo-thumbs
+    - 3.times do
+      .photo-thumb
+        = image_tag lorem_image("400x300")
+        h3.photo-title= lorem_words(3)
+        .photo-post-date = lorem_date("%Y,%m,%d")
+        .photo-copyright 授權方式：© ℗
+        .photo-counts= "點閱數量：#{rand(10)}"

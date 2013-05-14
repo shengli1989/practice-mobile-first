@@ -5,6 +5,7 @@
 @import "normalize";
 @include normalize;
 
+@import "bootstrap";
 // 設定基本字體與文字高度
 body { font-family: sans-serif; vertical-align: baseline; }
 @include establish-baseline;
@@ -17,3 +18,8 @@ body { font-family: sans-serif; vertical-align: baseline; }
 @import "layout";
 
 
+//
+@import "header";
+@import "footer";
+@import "pages/blog";
+@import "pages/photos"

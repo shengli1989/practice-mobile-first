@@ -1,0 +1,34 @@
+.content
+  h2.page-title BLOG
+  .posts
+    - 4.times do
+      .post-item
+        h3.post-title: a href="#"= lorem_words( rand(9)+3 )
+        .post-meta
+          .post-date= lorem_date( "%Y, %m, %d" )
+          a.post-tag href="#"= lorem_word
+
+        .post-thumbnail
+          = image_tag lorem_image("400x300")
+        p= lorem_paragraph
+        a.read-more href="#" Read More...
+    .pagination
+      ul
+        li: a href="#" ←
+        - ( rand(7)+1 ).times do |i|
+          li: a href="#"= (i+1)
+        li: a href="#" →
+
+  .sidebar
+    .archive
+      h3.archive-title Category
+      ul
+        - (rand(3)+5).times do
+          li: a href="#"= lorem_word
+    .archive
+      h3.archive-title Rencent articles
+      ul
+        - (rand(3)+5).times do
+          li: a href="#"= lorem_words(rand(3)+2)
+
+

@@ -1,0 +1,11 @@
+.photo-thumb {
+  @include trailer(2);
+  img {
+    display: block;
+  }
+}
+
+.photo-title {
+  @include adjust-font-size-to(24px,1);
+  @include trailer(.25);
+}

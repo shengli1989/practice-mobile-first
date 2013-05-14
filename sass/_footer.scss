@@ -1,0 +1,26 @@
+.footer {
+  border-top: 1px solid #ccc;
+  //@include padding-leader(1);
+  @include padding-trailer(1);
+}
+
+.footer-meta {
+  margin: 0 auto;
+  @include leader(1);
+  @include pie-clearfix;
+  li {
+    float: left;
+    border-left: 1px solid #ccc;
+    padding: 0 .5em;
+    &:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+}
+
+.copyright {
+  @include leader(1);
+  @include adjust-font-size-to(14px);
+  color: #999;
+}

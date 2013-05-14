@@ -1,9 +1,7 @@
 body {
   color: #555;
-  font-family: "Baskerville",
-             "Georgia",
-             "Times New Roman",
-             serif;
+  font-family: "Georgia", "Times New Roman", serif;
+  @include adjust-font-size-to(16px);
 }
 
 
@@ -27,10 +25,12 @@ p {
 a {
   color: #369;
   text-decoration: none;
-  //@include hover-link;
+  @include hover-link;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  @include leader(1);
+  @include trailer(1);
 }
