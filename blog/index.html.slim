@@ -14,9 +14,11 @@
         a.read-more href="#" Read More...
     .pagination
       ul
-        li: a href="#" ←
+        li.disabled: a href="#" ←
+        li.active: a href="#" 1
         - ( rand(7)+1 ).times do |i|
-          li: a href="#"= (i+1)
+          li: a href="#"= (i+2)
+        li: a href="#" ...
         li: a href="#" →
 
   .sidebar
