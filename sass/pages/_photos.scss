@@ -24,10 +24,10 @@
 
 .photo-title {
   @include adjust-font-size-to(20px,1);
-  //@include trailer(.25);
+  @include trailer(.25);
 }
 .photo-text {
-  @include leader(.25);
+  @include leader(.5);
   @include trailer(.5);
 }
 .photo-meta  {

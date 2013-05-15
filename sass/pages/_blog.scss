@@ -46,7 +46,7 @@
 }
 
 
-.sidebar {
+.sidebar-blog {
   @include at-breakpoint($desktop) {
     @include span-columns(3 omega, 12);
   }

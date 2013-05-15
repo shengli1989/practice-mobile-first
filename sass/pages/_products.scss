@@ -1,0 +1,107 @@
+.products {
+  @include pie-clearfix;
+  @include at-breakpoint($desktop) {
+  @include span-columns(8 omega,12);
+  }
+}
+.primary-products {
+  @include pie-clearfix;
+}
+.product-item {
+  text-align: center;
+  @include trailer(2);
+  @include at-breakpoint($ipad) {
+    @include span-columns(4);
+    @include nth-omega(2n);
+  }
+}
+.product-pic {
+  display: block;
+}
+.product-title {
+  @include adjust-font-size-to(36px,2);
+}
+.product-descript {
+  @include adjust-font-size-to(18px,1);
+  margin-bottom: 0;
+}
+.product-price {
+  @include adjust-font-size-to(18px,1);
+  color: red;
+  font-weight: bold;
+  margin-right: 1.5em;
+  //@include adjust-font-size-to(20px);
+}
+.product-action {
+  @include leader(.5);
+}
+
+.other-products {
+  @include pie-clearfix;
+  @include padding-leader(1);
+  border-top: 1px solid #999;
+  .product-item {
+    text-align: left;
+    @include span-columns(2);
+    @include nth-omega(2n);
+    @include at-breakpoint($ipad) {
+
+      @include span-columns(2);
+      @include remove-nth-omega(2n);
+      @include nth-omega(4n);
+    }
+  }
+  .product-title {
+    @include adjust-font-size-to(18px,1);
+  }
+  .product-descript {
+    @include adjust-font-size-to(16px,1);
+    margin-bottom: 0;
+  }
+  .product-price {
+    @include adjust-font-size-to(16px,1);
+    color: red;
+    font-weight: bold;
+    margin-right: 1.5em;
+    //@include adjust-font-size-to(20px);
+  }
+  .product-action {
+    @include leader(.5);
+    .btn-primary {
+      @include adjust-font-size-to(14px,1);
+    }
+  }
+}
+
+
+.sidebar-products {
+  h2 {
+    @include trailer(.25);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(3, 12);
+  }
+}
+.category {
+  @include at-breakpoint($ipad) {
+    @include span-columns(4);
+    @include nth-omega(2n);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(3,3);
+  }
+}
+.category-title {
+  border-bottom: 1px solid #999;
+  @include trailer(.25);
+}
+.category-list {
+  @include trailer(1);
+  li {
+    @include adjust-font-size-to(16px,1.5);
+    border-top: 1px dotted #ccc;
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
