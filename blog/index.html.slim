@@ -12,14 +12,7 @@
           = image_tag lorem_image("400x300")
         p= lorem_paragraph
         a.read-more href="#" Read More...
-    .pagination
-      ul
-        li.disabled: a href="#" ←
-        li.active: a href="#" 1
-        - ( rand(7)+1 ).times do |i|
-          li: a href="#"= (i+2)
-        li: a href="#" ...
-        li: a href="#" →
+    = render "/partials/pagination"
 
   .sidebar
     .archive

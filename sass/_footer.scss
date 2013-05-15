@@ -1,15 +1,15 @@
 .footer {
+  @include pie-clearfix;
   border-top: 1px solid #ccc;
   //@include padding-leader(1);
   @include padding-trailer(1);
 }
-
 .footer-meta {
-  margin: 0 auto;
+  text-align: center;
   @include leader(1);
   @include pie-clearfix;
   li {
-    float: left;
+    display: inline;
     border-left: 1px solid #ccc;
     padding: 0 .5em;
     &:first-child {
@@ -17,10 +17,18 @@
       padding-left: 0;
     }
   }
+  @include at-breakpoint($ipad) {
+    float: left;
+  }
 }
 
 .copyright {
   @include leader(1);
   @include adjust-font-size-to(14px);
   color: #999;
+  text-align: center;
+  @include at-breakpoint($ipad) {
+    float: right;
+    text-align: left;
+  }
 }

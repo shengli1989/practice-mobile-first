@@ -1,11 +1,35 @@
 .photo-thumb {
+  display: block;
+  @include at-breakpoint($ipad) {
+    vertical-align: top;
+    width: columns(4);
+    display: inline-block;
+  }
+  @include at-breakpoint($desktop) {
+    width: columns(4);
+    display: inline-block;
+  }
+}
+
+.photo-item {
   @include trailer(2);
-  img {
+  padding: 0 1.5em;
+  .photo {
     display: block;
+    img {
+      display: block;
+    }
   }
 }
 
 .photo-title {
-  @include adjust-font-size-to(24px,1);
-  @include trailer(.25);
+  @include adjust-font-size-to(20px,1);
+  //@include trailer(.25);
+}
+.photo-text {
+  @include leader(.25);
+  @include trailer(.5);
+}
+.photo-meta  {
+  color: #999;
 }

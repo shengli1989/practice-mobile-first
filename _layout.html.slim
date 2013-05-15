@@ -15,3 +15,8 @@ html
       = yield
       = render "/partials/footer"
     = livereload_js unless ENV["RACK_ENV"] == "production"
+
+    = javascript_include_tag \
+      "//code.jquery.com/jquery-1.9.1.min.js", \
+      "jquery.equalheight", \
+      "all"
