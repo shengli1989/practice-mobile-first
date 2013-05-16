@@ -1,0 +1,177 @@
+.hero {
+  @include pie-clearfix;
+  padding: 0 space(.5);
+  @include padding-leader(3);
+  @include padding-trailer(2);
+  background-color: #eaeaea;
+
+  @include at-breakpoint($ipad) {
+
+  }
+  @include at-breakpoint($desktop) {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+}
+
+.hero-img {
+  display: block;
+  margin: 0 auto;
+  @include trailer(1);
+  @include at-breakpoint($ipad) {
+
+  }
+  @include at-breakpoint($desktop) {
+    float: left;
+    width: columns(5);
+  }
+}
+.hero-main {
+  text-align: center;
+  p {
+    display: none;
+  }
+  @include at-breakpoint($ipad) {
+    p {
+      display: block;
+      @include leader(.5);
+      @include adjust-font-size-to(20px,1);
+    }
+  }
+  @include at-breakpoint($desktop) {
+    text-align: left;
+    float: right;
+    width: columns(6.5);
+    p {
+      @include adjust-font-size-to(24px,1.5);
+    }
+  }
+}
+.hero-title {
+  @include adjust-font-size-to(32px,1.5);
+  @include at-breakpoint($ipad) {
+    @include adjust-font-size-to(60px,3);
+  }
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(54px,3);
+  }
+}
+.hero-subtitle {
+  display: block;
+  font-weight: normal;
+  @include at-breakpoint($ipad) {
+  }
+  @include at-breakpoint($desktop) {
+  }
+}
+
+
+.recent-item {
+  @include pie-clearfix;
+  @include leader(2);
+  border-bottom: 1px dotted #999;
+  &:last-child {
+    border-bottom: none;
+  }
+  .more {
+    display: block;
+    font-style: italic;
+    float: right;
+    clear: both;
+    @include trailer(.5);
+  }
+}
+.recent-item-title {
+  @include adjust-font-size-to(32px,1);
+  @include padding-trailer(.25);
+  //border-bottom: 1px dotted #999;
+}
+
+// recent-photo
+.recent-photo-thumb {
+  display: block;
+  @include at-breakpoint($ipad) {
+    vertical-align: top;
+    @include span-columns(4);
+    @include nth-omega(2n);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(3);
+    @include remove-nth-omega(2n);
+    @include nth-omega(4n);
+  }
+}
+.recent-photo-item {
+  position: relative;
+  display: block;
+  @include trailer(2);
+  padding: 0;
+  &:hover {
+    opacity: 0.8;
+    .recent-photo-title {
+      display: block;
+      background-color: rgba(55,55,55,.1);
+    }
+  }
+  &:last-child {
+    @include trailer(1);
+  }
+  @include at-breakpoint($ipad) {
+    @include trailer(1);
+  }
+}
+.recent-photo-title {
+  display: none;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  @include adjust-font-size-to(18px,3);
+  @include ellipsis;
+}
+.recent-photo {
+  display: block;
+  img {
+    margin-top: 0;
+    display: block;
+  }
+}
+
+
+//rencent products
+.recent-product-item {
+  @include trailer(1.5);
+  text-align: left;
+  @include span-columns(2);
+  @include nth-omega(2n);
+  @include at-breakpoint($ipad) {
+    @include span-columns(2);
+    @include remove-nth-omega(2n);
+    @include nth-omega(4n);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(3);
+    @include remove-nth-omega(2n);
+    @include nth-omega(4n);
+  }
+}
+.recent-product-title {
+  @include adjust-font-size-to(18px,1);
+}
+.recent-product-descript {
+  @include adjust-font-size-to(16px,1);
+  margin-bottom: 0;
+}
+.recent-product-price {
+  @include adjust-font-size-to(16px,1);
+  color: red;
+  font-weight: bold;
+  //@include adjust-font-size-to(20px);
+}
+.recent-product-action {
+  @include leader(.5);
+  .btn-primary {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

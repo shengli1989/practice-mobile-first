@@ -8,7 +8,7 @@
           h3.photo-title: a href="#"= lorem_words(4)
           p.photo-text= lorem_sentence
           .photo-meta
-            .photo-post-date = "上傳日期：#{lorem_date("%Y,%m,%d")}"
+            .photo-post-date = "上傳日期：#{lorem_date("%Y/%m/%d")}"
             .photo-copyright 授權方式：© ℗
             .photo-counts= "點閱數量：#{rand(10)}"
     = render "/partials/pagination"

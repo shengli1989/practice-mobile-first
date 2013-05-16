@@ -87,7 +87,7 @@
 
 
 .sidebar-products {
-  h2 {
+  h3 {
     @include trailer(.25);
   }
   @include at-breakpoint($desktop) {
@@ -107,7 +107,7 @@
 }
 .category-title {
   border-bottom: 1px solid #999;
-  @include trailer(.25);
+  @include padding-trailer(.25);
 }
 .category-list {
   @include trailer(1);

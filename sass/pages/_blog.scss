@@ -9,6 +9,9 @@
   @include trailer(1);
   border-bottom: 1px dotted #ccc;
 }
+.post-meta {
+  @include pie-clearfix;
+}
 .post-date {
   color: #bbb;
   @include at-breakpoint($desktop) {

@@ -1,0 +1,34 @@
+.hero
+  = image_tag lorem_image("400x400"), :class => "hero-img"
+  .hero-main
+    h1.hero-title
+      span.hero-subtitle WECOME TO
+      |MOBILE FIRST
+    p= lorem_sentences(2.5)
+
+.content
+  .recent-item
+    h2.recent-item-title Recent Photos
+    - 4.times do
+      .recent-photo-thumb
+        a.recent-photo-item href="#"
+          .recent-photo= image_tag lorem_image("400x300")
+          h3.recent-photo-title= lorem_words(4)
+    a.more href="#" See More →
+  .recent-item
+    h2.recent-item-title Recent Products
+    -4.times do
+      .recent-product-item
+        = image_tag lorem_image("400x300"), :class => "recent-product-pic"
+        h3.recent-product-title: a href="#" iPad mini
+        .recent-product-descript Wi-Fi 16G
+        span.recent-product-price $#{300+rand(50)}.00
+        .recent-product-action
+        a.btn.btn-primary BUY NOW
+    a.more href="#" See More →
+  .recent-item
+    h2.recent-item-title Recent Articles
+
+
+
+
