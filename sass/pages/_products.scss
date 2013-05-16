@@ -39,8 +39,9 @@
 .other-products {
   @include pie-clearfix;
   @include padding-leader(1);
-  border-top: 1px solid #999;
+  border-top: 1px dotted #999;
   .product-item {
+    @include trailer(1.5);
     text-align: left;
     @include span-columns(2);
     @include nth-omega(2n);
@@ -68,8 +69,19 @@
   .product-action {
     @include leader(.5);
     .btn-primary {
-      @include adjust-font-size-to(14px,1);
+      font-size: 14px;
+      line-height: 16px;
     }
+  }
+  .more {
+    display: block;
+    clear: both;
+    text-align: right;
+    font-style: italic;
+    border-top: 1px dotted #999;
+    @include leader(1);
+    @include padding-leader(1);
+    @include trailer(2);
   }
 }
 
@@ -84,11 +96,13 @@
 }
 .category {
   @include at-breakpoint($ipad) {
-    @include span-columns(4);
+    @include span-columns(3);
+    padding-right: columns(1)+gutter(8);
     @include nth-omega(2n);
   }
   @include at-breakpoint($desktop) {
     @include span-columns(3,3);
+    @include remove-nth-omega(2n);
   }
 }
 .category-title {

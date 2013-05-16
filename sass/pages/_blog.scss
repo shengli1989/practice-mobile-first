@@ -67,4 +67,13 @@
       @include adjust-font-size-to(16px,1.5);
     }
   }
+  @include at-breakpoint($ipad) {
+    @include span-columns(3);
+    padding-right: columns(1)+gutter(8);
+    @include nth-omega(2n);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(3,3);
+    @include remove-nth-omega(2n);
+  }
 }

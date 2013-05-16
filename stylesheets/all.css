@@ -4354,6 +4354,23 @@ body {
     .archive li a {
       font-size: 1em;
       line-height: 2.25em; }
+  @media (min-width: 641px) {
+    .archive {
+      width: 35.64356%;
+      float: left;
+      margin-right: 2.9703%;
+      padding-right: 12.87129%; }
+      .archive:nth-child(2n) {
+        float: right;
+        margin-right: 0; } }
+  @media (min-width: 1024px) {
+    .archive {
+      width: 100%;
+      float: left;
+      margin-right: 8.33333%; }
+      .archive:nth-child(2n) {
+        float: left;
+        margin-right: 1.96078%; } }
 
 .photo-thumb {
   display: block; }
@@ -4443,12 +4460,13 @@ body {
 .other-products {
   *zoom: 1;
   padding-top: 1.5em;
-  border-top: 1px solid #999; }
+  border-top: 1px dotted #999; }
   .other-products:after {
     content: "";
     display: table;
     clear: both; }
   .other-products .product-item {
+    margin-bottom: 2.25em;
     text-align: left;
     width: 46.93878%;
     float: left;
@@ -4484,8 +4502,17 @@ body {
   .other-products .product-action {
     margin-top: 0.75em; }
     .other-products .product-action .btn-primary {
-      font-size: 0.875em;
-      line-height: 1.71429em; }
+      font-size: 14px;
+      line-height: 16px; }
+  .other-products .more {
+    display: block;
+    clear: both;
+    text-align: right;
+    font-style: italic;
+    border-top: 1px dotted #999;
+    margin-top: 1.5em;
+    padding-top: 1.5em;
+    margin-bottom: 3em; }
 
 .sidebar-products h2 {
   margin-bottom: 0.375em; }
@@ -4497,9 +4524,10 @@ body {
 
 @media (min-width: 641px) {
   .category {
-    width: 48.51485%;
+    width: 35.64356%;
     float: left;
-    margin-right: 2.9703%; }
+    margin-right: 2.9703%;
+    padding-right: 12.87129%; }
     .category:nth-child(2n) {
       float: right;
       margin-right: 0; } }
@@ -4507,7 +4535,10 @@ body {
   .category {
     width: 100%;
     float: left;
-    margin-right: 8.33333%; } }
+    margin-right: 8.33333%; }
+    .category:nth-child(2n) {
+      float: left;
+      margin-right: 1.96078%; } }
 
 .category-title {
   border-bottom: 1px solid #999;
@@ -4521,3 +4552,6 @@ body {
     border-top: 1px dotted #ccc; }
     .category-list li:first-child {
       border-top: none; }
+
+.pagination {
+  margin: 1.5em 0; }
