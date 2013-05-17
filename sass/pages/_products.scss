@@ -1,14 +1,14 @@
 .products {
   @include pie-clearfix;
   @include at-breakpoint($desktop) {
-  @include span-columns(8 omega,12);
+  @include span-columns(9 omega,12);
   }
 }
 .primary-products {
   @include pie-clearfix;
 }
 .product-item {
-  text-align: center;
+  text-align: left;
   @include trailer(2);
   @include at-breakpoint($ipad) {
     @include span-columns(4);
@@ -19,7 +19,9 @@
   display: block;
 }
 .product-title {
-  @include adjust-font-size-to(36px,2);
+  @include leader(.25);
+  @include trailer(.25);
+  @include adjust-font-size-to(20px,1);
 }
 .product-descript {
   @include adjust-font-size-to(18px,1);
@@ -29,12 +31,31 @@
   @include adjust-font-size-to(18px,1);
   color: red;
   font-weight: bold;
-  margin-right: 1.5em;
   //@include adjust-font-size-to(20px);
 }
-.product-action {
-  @include leader(.5);
+.product-orgin-price {
+  color: #999;
+  text-decoration: line-through;
+  margin-right: 1.5em;
+  @include adjust-font-size-to(18px,1);
 }
+
+.product-action {
+  position: relative;
+  .btn {
+    @include transition(.3s ease-in);
+    //display: none;
+    opacity: 0.25;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &:hover .btn {
+    opacity: 1;
+    display: block;
+  }
+}
+
 
 .other-products {
   @include pie-clearfix;
@@ -46,16 +67,19 @@
     @include span-columns(2);
     @include nth-omega(2n);
     @include at-breakpoint($ipad) {
-
       @include span-columns(2);
       @include remove-nth-omega(2n);
       @include nth-omega(4n);
     }
   }
   .product-title {
-    @include adjust-font-size-to(18px,1);
+    height: 3em;
+    overflow: hidden;
+    @include adjust-font-size-to(16px,1);
   }
   .product-descript {
+    height: 3em;
+    overflow: hidden;
     @include adjust-font-size-to(16px,1);
     margin-bottom: 0;
   }

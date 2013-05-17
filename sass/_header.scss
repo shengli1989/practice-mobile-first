@@ -2,23 +2,34 @@
   @include leader(1);
   @include pie-clearfix;
   text-align: center;
+  position: relative;
 }
 
 .logo {
+  text-align: left;
   @include padding-trailer(.5);
+  @include adjust-font-size-to(36px);
+  @include at-breakpoint($ipad) {
+    text-align: center;
+  }
   @include at-breakpoint($desktop) {
     float: left;
   }
 }
 
 .main-nav {
-  @include padding-trailer(1);
+  height: 0;
+  overflow: hidden;
+  @include transition(height .3s ease-in);
+  //@include padding-trailer(1);
   a {
     display: block;
     line-height: 35px;
     border-top: 1px solid #ccc;
   }
   @include at-breakpoint($desktop) {
+    height: auto;
+    overflow: visible;
     @include padding-leader(.5);
     float: right;
     li {
@@ -29,5 +40,36 @@
         border-top: none;
       }
     }
+  }
+}
+.open {
+  height: 8em;
+  @include transition(.3s ease-in);
+}
+.menu-btn {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  display: block;
+  margin-top: -17px;
+  padding-top: 1.5em;
+  width: 2em;
+  &:hover {
+    opacity: .75;
+  }
+  @include at-breakpoint($desktop) {
+    display: none;
+  }
+}
+.menu-btn-bar {
+  $margin-width: 7px;
+  display: block;
+  margin-bottom: $margin-width;
+  height: 2px;
+  background-color: #369;
+  &:first-child {
+    margin-top: $margin-width;
   }
 }

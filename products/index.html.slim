@@ -4,21 +4,27 @@
     .primary-products
       - 2.times do
         .product-item
-          = image_tag lorem_image("400x300"), :class => "product-pic"
-          h3.product-title: a href="#" MacBook Pro
-          .product-descript 13-inch: 2.5GHz
-          span.product-price $#{1000+rand(300)}.00 Only
           .product-action
             a.btn.btn-primary BUY NOW
+            = image_tag lorem_image("400x300"), :class => "product-pic"
+          .product-price
+            span.product-orgin-price $#{1000+rand(300)}.00
+            |$#{1000+rand(300)}.00 Only
+          h3.product-title: a href="#"= lorem_sentence
+          .product-descript= lorem_sentence
+
+
     .other-products
       - 4.times do
         .product-item
+          .product-action
+            a.btn.btn-primary BUY NOW
             = image_tag lorem_image("400x300"), :class => "product-pic"
-            h3.product-title: a href="#" iPad mini
-            .product-descript Wi-Fi 16G
-            span.product-price $#{300+rand(50)}.00
-            .product-action
-              a.btn.btn-primary BUY NOW
+          .product-price $#{1000+rand(300)}.00
+          h3.product-title: a href="#"= lorem_sentence
+          .product-descript= lorem_sentence
+
+
       a.more href="#" See More →
 
   .sidebar-products

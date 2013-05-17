@@ -7,27 +7,40 @@
     p= lorem_sentences(2.5)
 
 .content
-  .recent-item
+  .recent
     h2.recent-item-title Recent Photos
-    - 4.times do
-      .recent-photo-thumb
-        a.recent-photo-item href="#"
-          .recent-photo= image_tag lorem_image("400x300")
-          h3.recent-photo-title= lorem_words(4)
-    a.more href="#" See More →
-  .recent-item
+    .recent-item
+      - 4.times do
+        .recent-photo-thumb
+          a.recent-photo-item href="#"
+            .recent-photo= image_tag lorem_image("400x300")
+            h3.recent-photo-title= lorem_words(4)
+      a.more href="#" See More Photos →
+
+  .recent
     h2.recent-item-title Recent Products
-    -4.times do
-      .recent-product-item
-        = image_tag lorem_image("400x300"), :class => "recent-product-pic"
-        h3.recent-product-title: a href="#" iPad mini
-        .recent-product-descript Wi-Fi 16G
-        span.recent-product-price $#{300+rand(50)}.00
-        .recent-product-action
-        a.btn.btn-primary BUY NOW
-    a.more href="#" See More →
-  .recent-item
+    .recent-item
+      -4.times do
+        .recent-product-item
+          .recent-product-action
+            a.btn.btn-primary BUY NOW
+            = image_tag lorem_image("400x300"), :class => "recent-product-pic"
+          .recent-product-price $#{1000+rand(300)}.00
+          h3.recent-product-title: a href="#"= lorem_sentence
+          .recent-product-descript= lorem_sentence
+      a.more href="#" See More Products →
+  .recent
     h2.recent-item-title Recent Articles
+    .recent-item
+      -4.times do
+        .recent-article
+          = image_tag lorem_image("400x300"), :class => "recent-article-pic"
+          h3.recent-article-title: a href="#"= lorem_words(4)
+          p.recent-article-descript
+            = lorem_sentences(1)+"... "
+            a.read-more href="#" Read More →
+      a.more href="#" See More Articles →
+
 
 
 

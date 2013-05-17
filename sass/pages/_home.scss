@@ -27,13 +27,12 @@
   }
 }
 .hero-main {
-  text-align: center;
   p {
-    display: none;
+    text-align: left;
+    //@include adjust-font-size-to(1)
   }
   @include at-breakpoint($ipad) {
     p {
-      display: block;
       @include leader(.5);
       @include adjust-font-size-to(20px,1);
     }
@@ -66,7 +65,8 @@
 }
 
 
-.recent-item {
+
+.recent {
   @include pie-clearfix;
   @include leader(2);
   border-bottom: 1px dotted #999;
@@ -81,9 +81,12 @@
     @include trailer(.5);
   }
 }
+.recent-item {
+  @include pie-clearfix;
+}
 .recent-item-title {
   @include adjust-font-size-to(32px,1);
-  @include padding-trailer(.25);
+  @include trailer(.5);
   //border-bottom: 1px dotted #999;
 }
 
@@ -107,9 +110,8 @@
   @include trailer(2);
   padding: 0;
   &:hover {
-    opacity: 0.8;
     .recent-photo-title {
-      display: block;
+      opacity: .8;
       background-color: rgba(55,55,55,.1);
     }
   }
@@ -121,7 +123,8 @@
   }
 }
 .recent-photo-title {
-  display: none;
+  @include transition(.3s ease-out);
+  opacity: 0;
   text-align: center;
   position: absolute;
   bottom: 0;
@@ -155,18 +158,42 @@
     @include nth-omega(4n);
   }
 }
+.recent-product-action {
+  position: relative;
+  .btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+.recent-product-pic {
+  display: block;
+  margin-top: 0;
+}
 .recent-product-title {
   @include adjust-font-size-to(18px,1);
+  height: 2.8em;
+  overflow: hidden;
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(20px,1);
+  }
 }
 .recent-product-descript {
+  color: #999;
   @include adjust-font-size-to(16px,1);
   margin-bottom: 0;
+  height: 3em;
+  overflow: hidden;
+  @include at-breakpoint($desktop) {
+  }
 }
 .recent-product-price {
   @include adjust-font-size-to(16px,1);
   color: red;
   font-weight: bold;
-  //@include adjust-font-size-to(20px);
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(18px,1)
+  }
 }
 .recent-product-action {
   @include leader(.5);
@@ -174,4 +201,34 @@
     font-size: 14px;
     line-height: 16px;
   }
+}
+
+//recent-article
+.recent-article {
+  @include trailer(1.5);
+  text-align: left;
+  @include at-breakpoint($ipad) {
+    @include span-columns(4);
+    @include nth-omega(2n);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(3);
+    @include remove-nth-omega(2n);
+    @include nth-omega(4n);
+  }
+  .read-more {
+    display: block;
+    margin-top: 0;
+  }
+}
+.recent-article-pic {
+  display: block;
+  margin-top: 0;
+}
+.recent-article-title {
+  @include ellipsis;
+  @include adjust-font-size-to(20px,1);
+}
+.recent-article-descript {
+  @include leader(.25);
 }

@@ -4,10 +4,12 @@
     vertical-align: top;
     width: columns(4);
     display: inline-block;
+    //@include isolate-grid(3);
   }
   @include at-breakpoint($desktop) {
     width: columns(4);
     display: inline-block;
+    //@include isolate-grid(3);
   }
 }
 
