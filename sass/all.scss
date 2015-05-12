@@ -2,29 +2,18 @@
 @import "compass";
 @import "susy";
 
+// 基礎設定
 @import "normalize";
-@include normalize;
-
-@import "bootstrap";
-// 設定基本字體與文字高度
-body { font-family: sans-serif; vertical-align: baseline; }
-@include establish-baseline;
-
-// 良好文字排版
 @import "typography";
-
-
-// 引入總布局
 @import "layout";
 
+// partials
+@import "partials/pagination",
+        "partials/header",
+        "partials/footer";
 
-//
-@import "header";
-@import "footer";
-@import "pages/home";
-@import "pages/blog";
-@import "pages/photos";
-@import "pages/products";
-
-
-@import "partials/pagination";
+// pages
+@import "pages/home",
+        "pages/blog",
+        "pages/photos",
+        "pages/products";

@@ -172,8 +172,8 @@
 }
 .recent-product-title {
   @include adjust-font-size-to(18px,1);
-  height: 2.8em;
-  overflow: hidden;
+  // height: 2.6em;
+  // overflow: hidden;
   @include at-breakpoint($desktop) {
     @include adjust-font-size-to(20px,1);
   }
@@ -182,10 +182,8 @@
   color: #999;
   @include adjust-font-size-to(16px,1);
   margin-bottom: 0;
-  height: 3em;
+  // height: 3em;
   overflow: hidden;
-  @include at-breakpoint($desktop) {
-  }
 }
 .recent-product-price {
   @include adjust-font-size-to(16px,1);
